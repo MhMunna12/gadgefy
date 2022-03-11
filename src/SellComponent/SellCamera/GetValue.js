@@ -170,159 +170,6 @@ const GetValue = ({ modalIsOpen, closeModal, price, Show, _id }) => {
         <Button onClick={closeModal} variant="outline-danger">
           Close
         </Button>{" "}
-        <div className="container">
-          <h6 className="mt-5">
-            <FontAwesomeIcon className="icon" icon={faArrowDown} />
-            Scroll Down
-          </h6>
-          <br />
-          <div className="orders-container ml-5 mr-5 ">
-            <h6>Thank you so much for taking the time!</h6>
-
-            <p>Please provide the bellow details</p>
-
-            {/* onSubmit={handleSubmit(onSubmit)} */}
-
-            <div>
-              <form onSubmit={handleSubmit(onSubmit)}>
-                <label className="db">Does the DSLR camera switch on?</label>
-                <div className="field">
-                  <input
-                    type="radio"
-                    name="DSLR"
-                    value="YES"
-                    onChange={handleChange}
-                    id="dslrYes"
-                    // checked={formData.DSLR === "Yes"}
-                  />
-                  <label for="dslrYes">Yes</label>
-                </div>
-                <div className="field">
-                  <input
-                    type="radio"
-                    name="DSLR"
-                    value="No"
-                    onChange={handleChange}
-                    id="dslrNo"
-                    // checked={formData.DL === "No"}
-                  />
-                  <label for="dslrNo">No</label>
-                </div>
-                <label className="db">
-                  Are there any functional issues in your device?
-                </label>
-                <div className="field">
-                  <input
-                    type="radio"
-                    name="DSL"
-                    value="Yes"
-                    onChange={handleChanges}
-                    // checked={formData.DS === "Yes"}
-                  />
-                  <label>Yes</label>
-                </div>
-                <div className="field">
-                  <input
-                    type="radio"
-                    name="DSL"
-                    value="No"
-                    onChange={handleChanges}
-                    // checked={formData.DSL === "No"}
-                  />
-                  <label>No</label>
-                </div>
-                <label className="db">
-                  Are there any defects on your device's body?
-                </label>
-                <div className="field">
-                  <input
-                    type="radio"
-                    name="DSLRs"
-                    value="Yes"
-                    onChange={handleBodyChange}
-                    // checked={formData.DSLR === "Yes"}
-                  />
-                  <label>Yes</label>
-                </div>
-                <div className="field">
-                  <input
-                    type="radio"
-                    name="DSLRs"
-                    value="No"
-                    onChange={handleBodyChange}
-                    // checked={formData.DL === "No"}
-                  />
-                  <label>No</label>
-                </div>
-                <label className="db">Do you have any additional lens?</label>
-                <div className="field">
-                  <input
-                    type="radio"
-                    name="DS"
-                    value="Yes"
-                    onChange={handleLensChange}
-                    // checked={formData.DS === "Yes"}
-                  />
-                  <label>Yes</label>
-                </div>
-                <div className="field">
-                  <input
-                    type="radio"
-                    name="DS"
-                    value="No"
-                    onChange={handleLensChange}
-                    // checked={formData.DSL === "No"}
-                  />
-                  <label>No</label>
-                </div>
-                {/* <input className="btn-dark m-3" type="submit" /> */}
-                {/* <Link to={`/data/${_id}`}>submit</Link> */}
-                {/* <ModalDetail newPrice={newPrice} /> */}
-                <h6>
-                  <b>
-                    <span className="gtValue">Approximate Price : </span>
-                    <span className="gtPrice">₹ {newPrice}</span>
-                  </b>
-                </h6>
-                {/* <label htmlFor="">
-                <span className="error">Please provide Phone Number</span>
-              </label> */}
-                {/* <input
-                {...register("number", { required: true })}
-                className="m-2"
-                onChange={handleChange}
-              />
-              {errors.number && (
-                <span className="error">Phone Number is required</span>
-              )} */}
-
-                <div className="mt-3">
-                  <input
-                    type="checkbox"
-                    {...register("terms", { required: true })}
-                  />
-                  {errors.terms && (
-                    <span className="error m-2 pt-5">
-                      Please accept the terms & conditions.
-                    </span>
-                  )}
-                  <label className="pt-1 m-2">
-                    I agree to the{" "}
-                    <span>
-                      <a href="/terms&condition" target="_blank">
-                        Terms & conditions
-                      </a>
-                    </span>
-                  </label>
-                </div>
-                <div>
-                  <input className="btn-dark m-3" type="submit" />
-                </div>
-                <br />
-              </form>
-            </div>
-          </div>
-        </div>
         <div>
           <p className="text-danger">{error}</p>
           <form onSubmit={getOtp} style={{ display: !flag ? "block" : "none" }}>
@@ -352,8 +199,166 @@ const GetValue = ({ modalIsOpen, closeModal, price, Show, _id }) => {
               </button>
             </div>
           </form>
+
           {isSuccess ? (
-            "Otp SuccessFull"
+            <div className="container">
+              <h6 className="mt-5">
+                <FontAwesomeIcon className="icon" icon={faArrowDown} />
+                Scroll Down
+              </h6>
+              <br />
+              <div className="orders-container ml-5 mr-5 ">
+                <h6>Thank you so much for taking the time!</h6>
+
+                <p>Please provide the bellow details</p>
+
+                {/* onSubmit={handleSubmit(onSubmit)} */}
+
+                <div>
+                  <form onSubmit={handleSubmit(onSubmit)}>
+                    <label className="db">
+                      Does the DSLR camera switch on?
+                    </label>
+                    <div className="field">
+                      <input
+                        type="radio"
+                        name="DSLR"
+                        value="YES"
+                        onChange={handleChange}
+                        id="dslrYes"
+                        // checked={formData.DSLR === "Yes"}
+                      />
+                      <label for="dslrYes">Yes</label>
+                    </div>
+                    <div className="field">
+                      <input
+                        type="radio"
+                        name="DSLR"
+                        value="No"
+                        onChange={handleChange}
+                        id="dslrNo"
+                        // checked={formData.DL === "No"}
+                      />
+                      <label for="dslrNo">No</label>
+                    </div>
+                    <label className="db">
+                      Are there any functional issues in your device?
+                    </label>
+                    <div className="field">
+                      <input
+                        type="radio"
+                        name="DSL"
+                        value="Yes"
+                        onChange={handleChanges}
+                        // checked={formData.DS === "Yes"}
+                      />
+                      <label>Yes</label>
+                    </div>
+                    <div className="field">
+                      <input
+                        type="radio"
+                        name="DSL"
+                        value="No"
+                        onChange={handleChanges}
+                        // checked={formData.DSL === "No"}
+                      />
+                      <label>No</label>
+                    </div>
+                    <label className="db">
+                      Are there any defects on your device's body?
+                    </label>
+                    <div className="field">
+                      <input
+                        type="radio"
+                        name="DSLRs"
+                        value="Yes"
+                        onChange={handleBodyChange}
+                        // checked={formData.DSLR === "Yes"}
+                      />
+                      <label>Yes</label>
+                    </div>
+                    <div className="field">
+                      <input
+                        type="radio"
+                        name="DSLRs"
+                        value="No"
+                        onChange={handleBodyChange}
+                        // checked={formData.DL === "No"}
+                      />
+                      <label>No</label>
+                    </div>
+                    <label className="db">
+                      Do you have any additional lens?
+                    </label>
+                    <div className="field">
+                      <input
+                        type="radio"
+                        name="DS"
+                        value="Yes"
+                        onChange={handleLensChange}
+                        // checked={formData.DS === "Yes"}
+                      />
+                      <label>Yes</label>
+                    </div>
+                    <div className="field">
+                      <input
+                        type="radio"
+                        name="DS"
+                        value="No"
+                        onChange={handleLensChange}
+                        // checked={formData.DSL === "No"}
+                      />
+                      <label>No</label>
+                    </div>
+                    {/* <input className="btn-dark m-3" type="submit" /> */}
+                    {/* <Link to={`/data/${_id}`}>submit</Link> */}
+                    {/* <ModalDetail newPrice={newPrice} /> */}
+                    <h6>
+                      <b>
+                        <span className="gtValue">Approximate Price : </span>
+                        <span className="gtPrice">₹ {newPrice}</span>
+                      </b>
+                    </h6>
+                    <label htmlFor="">
+                      <span className="error">Please provide Phone Number</span>
+                    </label>
+                    <input
+                      defaultValue={number}
+                      {...register("number", { required: true })}
+                      className="m-2"
+                      onChange={handleChange}
+                    />
+                    {errors.number && (
+                      <span className="error">Phone Number is required</span>
+                    )}
+
+                    <div className="mt-3">
+                      <input
+                        type="checkbox"
+                        {...register("terms", { required: true })}
+                      />
+                      {errors.terms && (
+                        <span className="error m-2 pt-5">
+                          Please accept the terms & conditions.
+                        </span>
+                      )}
+                      <label className="pt-1 m-2">
+                        I agree to the{" "}
+                        <span>
+                          <a href="/terms&condition" target="_blank">
+                            Terms & conditions
+                          </a>
+                        </span>
+                      </label>
+                    </div>
+                    <div>
+                      <input className="btn-dark m-3" type="submit" />
+                    </div>
+                    <br />
+                  </form>
+                </div>
+              </div>
+            </div>
           ) : (
             <form
               onSubmit={verifyOtp}
